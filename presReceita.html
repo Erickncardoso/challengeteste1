@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Receita</title>
+</head>
+<body>    
+    <main class="patient-home">
+        <div class="patient-container">
+            <nav class="menu">
+				<div class="logo_hospital">
+				<img src="./src/images/logo_sabara.png" alt="Logo do Hospital Sabará" class="logo">
+				</div>
+				<div class="nav-section">
+					<a href="./consultas-medico.html" class="nav-item active">
+						<img src="./src/assets/iconConsultas.svg" alt="Dashboard" class="nav-icon">
+						<p>Consultas</p>
+					<a href="./exam_doctor.html" class="nav-item">
+						<img src="./src/assets/iconExames.svg" alt="Exames" class="nav-icon">
+						<p>Exames</p>
+					</a>
+					<a href="./hospitalization_doctor.html" class="nav-item">
+						<img src="./src/assets/iconInternacoes.svg" alt="Internação" class="nav-icon">
+						<p>Internação</p>
+					</a>
+					
+				</div>
+				
+				<div class="nav-section">
+					<h4 class="section-title">Conta</h4>
+					<a href="#" class="nav-item">
+						<img src="./src/assets/iconPerfil.svg" alt="Perfil" class="nav-icon">
+						<p>Perfil</p>
+					</a>
+					<a href="./login.html" class="nav-item">
+						<i class="fas fa-sign-out-alt"></i>
+						<span>Sair</span>
+					</a>
+				</div>
+			</nav>
+            <section class="main-content">
+                <header>
+                    <h1 class="page-title">Prescrição</h1>
+                    <div class="header-right">
+                        <div class="notify-wrapper">
+                            <i class="fas fa-bell" id="notifyBell"></i>
+                            <span class="notify-count">3</span>
+                            
+                            <div class="notify-dropdown">
+                                <div class="notify-header">
+                                    <h3>Notificações</h3>
+                                    <span class="notify-mark-read">Marcar todas como lidas</span>
+                                </div>
+                                
+                                <div class="notify-list">
+                                    <div class="notify-item urgent">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-calendar-exclamation"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Consulta Confirmada</span>
+                                                <small>Hoje 11:00</small>
+                                            </div>
+                                            <p>Sua consulta com Dr. Erick foi confirmada</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-file-medical"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Resultado de Exame</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Seus exames já estão disponíveis</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-pills"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Nova Receita</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Uma nova receita foi adicionada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <p class="user-name">Roberto</p>
+                                <p class="user-role">Médico</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="content-grid">
+                    <div class="main-column">
+                        <div class="rx-container">
+                            <div class="rx-main-content">
+                                <div class="rx-form-card">
+                                    <div class="rx-card-header">
+                                        <div class="rx-header-title">
+                                            <h3>Nova Prescrição</h3>
+                                            <p>Preencha os dados do medicamento</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="rx-type-selector">
+                                        <label class="rx-type-option">
+                                            <input type="radio" name="rx-type" checked>
+                                            <span class="rx-option-label">
+                                                <i class="fas fa-file-medical"></i>
+                                                <span class="rx-option-text">
+                                                    <strong>Receita Simples</strong>
+                                                    <small>Para medicamentos comuns</small>
+                                                </span>
+                                            </span>
+                                        </label>
+                                        
+                                        <label class="rx-type-option">
+                                            <input type="radio" name="rx-type">
+                                            <span class="rx-option-label">
+                                                <i class="fas fa-file-medical-alt"></i>
+                                                <span class="rx-option-text">
+                                                    <strong>Receita Controlada</strong>
+                                                    <small>Para medicamentos controlados</small>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="rx-medicine-form">
+                                        <div class="rx-form-row">
+                                            <div class="rx-form-group rx-flex-2">
+                                                <label>Nome do Medicamento</label>
+                                                <div class="rx-input-icon">
+                                                    <i class="fas fa-pills"></i>
+                                                    <input type="text" class="rx-input" placeholder="Digite o nome do medicamento">
+                                                </div>
+                                            </div>
+                                            <div class="rx-form-group">
+                                                <label>Concentração</label>
+                                                <div class="rx-input-icon">
+                                                    <i class="fas fa-weight"></i>
+                                                    <input type="text" class="rx-input" placeholder="Ex: 500mg">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rx-form-section">
+                                            <h4 class="rx-section-title">Posologia</h4>
+                                            <div class="rx-dosage-grid">
+                                                <div class="rx-dosage-card">
+                                                    <div class="rx-dosage-icon">
+                                                        <i class="fas fa-sun"></i>
+                                                    </div>
+                                                    <div class="rx-dosage-inputs">
+                                                        <label>Manhã</label>
+                                                        <div class="rx-dosage-controls">
+                                                            <input type="number" class="rx-input" min="0" value="0">
+                                                            <select class="rx-select">
+                                                                <option>Após café</option>
+                                                                <option>Em jejum</option>
+                                                                <option>08:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="rx-dosage-card">
+                                                    <div class="rx-dosage-icon">
+                                                        <i class="fas fa-cloud-sun"></i>
+                                                    </div>
+                                                    <div class="rx-dosage-inputs">
+                                                        <label>Tarde</label>
+                                                        <div class="rx-dosage-controls">
+                                                            <input type="number" class="rx-input" min="0" value="0">
+                                                            <select class="rx-select">
+                                                                <option>Após almoço</option>
+                                                                <option>Antes almoço</option>
+                                                                <option>14:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="rx-dosage-card">
+                                                    <div class="rx-dosage-icon">
+                                                        <i class="fas fa-moon"></i>
+                                                    </div>
+                                                    <div class="rx-dosage-inputs">
+                                                        <label>Noite</label>
+                                                        <div class="rx-dosage-controls">
+                                                            <input type="number" class="rx-input" min="0" value="0">
+                                                            <select class="rx-select">
+                                                                <option>Após jantar</option>
+                                                                <option>Antes jantar</option>
+                                                                <option>20:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rx-form-row">
+                                            <div class="rx-form-group">
+                                                <label>Duração do Tratamento</label>
+                                                <div class="rx-input-icon">
+                                                    <i class="fas fa-calendar"></i>
+                                                    <input type="number" class="rx-input" placeholder="Número de dias">
+                                                </div>
+                                            </div>
+                                            <div class="rx-form-group">
+                                                <label>Via de Administração</label>
+                                                <div class="rx-input-icon">
+                                                    <i class="fas fa-syringe"></i>
+                                                    <select class="rx-select">
+                                                        <option value="">Selecione</option>
+                                                        <option>Oral</option>
+                                                        <option>Intramuscular</option>
+                                                        <option>Intravenoso</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rx-form-section">
+                                            <label>Observações</label>
+                                            <textarea class="rx-textarea" rows="3" placeholder="Instruções adicionais para o paciente"></textarea>
+                                        </div>
+
+                                        <div class="rx-form-actions">
+                                            <button type="button" class="rx-btn-secondary">
+                                                <i class="fas fa-times"></i>
+                                                Cancelar
+                                            </button>
+                                            <button type="button" id="addMedicationBtn" class="rx-btn-primary">
+                                                <i class="fas fa-check"></i>
+                                                Adicionar Medicamento
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rx-medications-list">
+                                    <div class="rx-list-header">
+                                        <h3>Medicamentos Prescritos</h3>
+                                        <span class="rx-med-count">2 medicamentos</span>
+                                    </div>
+                                    
+                                    <div class="rx-medication-item">
+                                        <div class="rx-med-info">
+                                            <div class="rx-med-icon">
+                                                <i class="fas fa-pills"></i>
+                                            </div>
+                                            <div class="rx-med-details">
+                                                <h4>Dipirona 500mg</h4>
+                                                <p>1 comprimido a cada 6 horas se houver dor</p>
+                                                <div class="rx-med-tags">
+                                                    <span class="rx-tag">Oral</span>
+                                                    <span class="rx-tag">5 dias</span>
+                                                    <span class="rx-tag">20 comprimidos</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rx-med-actions">
+                                            <button class="rx-action-btn rx-edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="rx-action-btn rx-delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="side-column">
+                        <div class="rx-side-card">
+                            <div class="rx-patient-profile">
+                                <div class="rx-profile-header">
+                                    <div class="rx-profile-image">
+                                        
+                                    </div>
+                                    <div class="rx-profile-info">
+                                        <h3>João Silva</h3>
+                                        <span class="rx-patient-number">#TRUST0331</span>
+                                        <span class="rx-patient-basic">34 anos | Masculino</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rx-patient-details">
+                                <div class="rx-detail-item">
+                                    <i class="fas fa-tint"></i>
+                                    <div class="rx-detail-content">
+                                        <label>Tipo Sanguíneo</label>
+                                        <span>B+</span>
+                                    </div>
+                                </div>
+
+                                <div class="rx-detail-item">
+                                    <i class="fas fa-allergies"></i>
+                                    <div class="rx-detail-content">
+                                        <label>Alergias</label>
+                                        <span>Penicilina, Dipirona</span>
+                                    </div>
+                                </div>
+
+                                <div class="rx-detail-item">
+                                    <i class="fas fa-weight"></i>
+                                    <div class="rx-detail-content">
+                                        <label>Peso</label>
+                                        <span>75 kg</span>
+                                    </div>
+                                </div>
+
+                                <div class="rx-detail-item">
+                                    <i class="fas fa-ruler-vertical"></i>
+                                    <div class="rx-detail-content">
+                                        <label>Altura</label>
+                                        <span>1.75 m</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rx-last-prescriptions">
+                                <h4>Últimas Prescrições</h4>
+                                <div class="rx-prescription-history">
+                                    <div class="rx-history-item">
+                                        <div class="rx-history-date">
+                                            <span class="rx-date">15</span>
+                                            <span class="rx-month">MAR</span>
+                                        </div>
+                                        <div class="rx-history-content">
+                                            <h5>Amoxicilina 500mg</h5>
+                                            <p>7 dias - 3x ao dia</p>
+                                        </div>
+                                    </div>
+                                    <div class="rx-history-item">
+                                        <div class="rx-history-date">
+                                            <span class="rx-date">28</span>
+                                            <span class="rx-month">FEV</span>
+                                        </div>
+                                        <div class="rx-history-content">
+                                            <h5>Ibuprofeno 600mg</h5>
+                                            <p>5 dias - Se houver dor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html> 

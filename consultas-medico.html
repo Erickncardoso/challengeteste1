@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portal Paciente - Consultas</title>
+</head>
+<body>    
+    <main class="patient-home">
+        <div class="patient-container">
+            
+            <nav class="menu">
+				<div class="logo_hospital">
+				<img src="./src/images/logo_sabara.png" alt="Logo do Hospital Sabará" class="logo">
+				</div>
+				<div class="nav-section">
+					<a href="home_doctor.html" class="nav-item">
+						<i class="fas fa-home"></i>
+						<span>Home</span>
+					</a>
+					<a href="consultas-medico.html" class="nav-item active">
+						<i class="fas fa-calendar-check"></i>
+						<span>Consultas</span>
+					</a>
+					<a href="exam_doctor.html" class="nav-item">
+						<i class="fas fa-file-medical"></i>
+						<span>Exames</span>
+					</a>
+					<a href="hospitalization_doctor.html" class="nav-item">
+						<i class="fas fa-procedures"></i>
+						<span>Internação</span>
+					</a>
+					<a href="presReceita.html" class="nav-item">
+						<i class="fas fa-prescription"></i>
+						<span>Prescrever</span>
+					</a>
+				</div>
+				
+				<div class="nav-section">
+					<h4 class="section-title">Conta</h4>
+					<a href="#" class="nav-item">
+						<i class="fas fa-user"></i>
+						<span>Perfil</span>
+					</a>
+					<a href="./login.html" class="nav-item">
+						<i class="fas fa-sign-out-alt"></i>
+						<span>Sair</span>
+					</a>
+				</div>
+			</nav>
+
+            <section class="main-content">
+                <!-- Header -->
+                <header>
+                    <h1 class="page-title">Consultas</h1>
+                    <div class="header-right">
+                        <div class="notify-wrapper">
+                            <i class="fas fa-bell" id="notifyBell"></i>
+                            <span class="notify-count">3</span>
+                            
+                            <!-- Modal de Notificações -->
+                            <div class="notify-dropdown">
+                                <div class="notify-header">
+                                    <h3>Notificações</h3>
+                                    <span class="notify-mark-read">Marcar todas como lidas</span>
+                                </div>
+                                
+                                <div class="notify-list">
+                                    <div class="notify-item urgent">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-calendar-exclamation"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Consulta Confirmada</span>
+                                                <small>Hoje 11:00</small>
+                                            </div>
+                                            <p>Sua consulta com Dr. Erick foi confirmada</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-file-medical"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Resultado de Exame</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Seus exames já estão disponíveis</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-pills"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Nova Receita</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Uma nova receita foi adicionada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-profile">
+                        
+                            <div class="user-info">
+                                <p class="user-name">Roberto</p>
+                                <p class="user-role">Médico</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="content-grid">
+                    <div class="calendar-section">
+                        <h1>Calendário de Consultas</h1>
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                                <h2>Novembro</h2>
+                                <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <div>D</div>
+                                <div>S</div>
+                                <div>T</div>
+                                <div>Q</div>
+                                <div>Q</div>
+                                <div>S</div>
+                                <div>S</div>
+                            </div>
+                            <div class="calendar-days" id="calendarDays">
+                             
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="patients-list-section">
+                        <h2>Pacientes Agendados</h2>
+                        <div class="patients-container">
+                            <div class="patient-card" data-id="TRUST0331">
+                                <div class="patient-header">
+                                   
+                                    <div class="patient-basic-info">
+                                        <h3>John Doe</h3>
+                                        <span>34 anos | Masculino</span>
+                                        <span class="patient-id">#TRUST0331</span>
+                                    </div>
+                                    <button class="more-options"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="patient-details">
+                                    <div class="detail-item">
+                                        <span class="label">Tipo sanguíneo:</span>
+                                        <span class="value">B +</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Contato:</span>
+                                        <span class="value">9995 999 999</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Ultima consultaa:</span>
+                                        <span class="value">13th Feb 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="patient-card" data-id="TRUST0332">
+                                <div class="patient-header">
+                                   
+                                    <div class="patient-basic-info">
+                                        <h3>Maria Silva</h3>
+                                        <span>28 anos | Feminino</span>
+                                        <span class="patient-id">#TRUST0332</span>
+                                    </div>
+                                    <button class="more-options"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="patient-details">
+                                    <div class="detail-item">
+                                        <span class="label">Tipo sanguíneo:</span>
+                                        <span class="value">A +</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">WhatsApp:</span>
+                                        <span class="value">9995 999 998</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Proxima consulta:</span>
+                                        <span class="value">15th Feb 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    
+
+    <div class="patient-details-modal" id="patientDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="patient-profile">
+                    <img src="" alt="Patient" class="patient-photo" id="modalPatientPhoto">
+                    <div class="patient-basic">
+                        <h2 id="modalPatientName"></h2>
+                        <p id="modalPatientAge"></p>
+                        <p id="modalPatientId"></p>
+                    </div>
+                </div>
+                <div class="patient-info-grid">
+                    <div class="info-item">
+                        <label>Tipo sanguíneo</label>
+                        <span id="modalBloodGroup"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>WhatsApp</label>
+                        <span id="modalContact"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Altura</label>
+                        <span id="modalHeight"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Peso</label>
+                        <span id="modalWeight"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Alimentos</label>
+                        <div class="ailments-tags" id="modalAilments"></div>
+                    </div>
+                    <div class="info-item">
+                        <label>Proxima consulta</label>
+                        <span id="modalLastVisit"></span>
+                    </div>
+                </div>
+                <button class="create-consultation-btn">Create Consultation</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html> 

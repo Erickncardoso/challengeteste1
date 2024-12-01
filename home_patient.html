@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Painel - Paciente</title>
+</head>
+<body>    
+    <main class="patient-home">
+        <div class="patient-container">
+            <nav class="menu">
+				<div class="logo_hospital">
+				<img src="./src/images/logo_sabara.png" alt="Logo do Hospital Sabará" class="logo">
+				</div>
+				<div class="nav-section">
+					<a href="home_patient.html" class="nav-item active">
+						<i class="fas fa-home"></i>
+						<span>Home</span>
+					</a>
+					<a href="consultas.html" class="nav-item">
+						<i class="fas fa-calendar-check"></i>
+						<span>Consultas</span>
+					</a>
+					<a href="exam_patient.html" class="nav-item">
+						<i class="fas fa-file-medical"></i>
+						<span>Exames</span>
+					</a>
+					
+				</div>
+				
+				<div class="nav-section">
+					<h4 class="section-title">Conta</h4>
+					<a href="#" class="nav-item">
+						<i class="fas fa-user"></i>
+						<span>Perfil</span>
+					</a>
+					<a href="./login.html" class="nav-item">
+						<i class="fas fa-sign-out-alt"></i>
+						<span>Sair</span>
+					</a>
+				</div>
+			</nav>
+
+            <section class="main-content">
+                <!-- Header -->
+                <header>
+                    <h1 class="page-title">Painel Paciente</h1>
+                    <div class="header-right">
+                        <div class="notify-wrapper">
+                            <i class="fas fa-bell" id="notifyBell"></i>
+                            <span class="notify-count">3</span>
+                            
+                            <!-- Modal de Notificações -->
+                            <div class="notify-dropdown">
+                                <div class="notify-header">
+                                    <h3>Notificações</h3>
+                                    <span class="notify-mark-read">Marcar todas como lidas</span>
+                                </div>
+                                
+                                <div class="notify-list">
+                                    <div class="notify-item urgent">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-calendar-exclamation"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Consulta Confirmada</span>
+                                                <small>Hoje 11:00</small>
+                                            </div>
+                                            <p>Sua consulta com Dr. Erick foi confirmada</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-file-medical"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Resultado de Exame</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Seus exames já estão disponíveis</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-pills"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Nova Receita</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Uma nova receita foi adicionada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <p class="user-name">Roberto</p>
+                                <p class="user-role">Paciente</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+<main>
+    
+
+    <div class="pac-reminder">
+        <div class="pac-reminder-icon">
+            <i class="far fa-calendar"></i>
+        </div>
+        <div class="pac-reminder-content">
+            <div class="pac-reminder-text">
+                <h3>Lembrete Consulta</h3>
+                <p>Dermatologista</p>
+                <p>Nome do Médico(a)</p>
+            </div>
+            <div class="pac-reminder-date">15/12/2024 - 11:00</div>
+        </div>
+    </div>
+
+    <div class="pac-actions-grid">
+        <div class="pac-action-row">
+            <div class="pac-action-card">
+                <div class="pac-action-icon">
+                    <i class="far fa-calendar"></i>
+                </div>
+                <span>31</span>
+                <p>Agendar Exame</p>
+            </div>
+
+            <div class="pac-action-card">
+                <div class="pac-action-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <p>Agendar Consulta</p>
+            </div>
+
+            <div class="pac-action-card">
+                <div class="pac-action-icon">
+                    <i class="fas fa-book-medical"></i>
+                </div>
+                <p>Dicas de Saúde</p>
+            </div>
+
+            <div class="pac-action-card">
+                <div class="pac-action-icon">
+                    <i class="fas fa-file-medical-alt"></i>
+                </div>
+                <p>Ver Resultado de Exame</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pac-appointments">
+        <h2>Próximas Consultas</h2>
+        <table class="pac-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Doença</th>
+                    <th>Data</th>
+                    <th>Aprovação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="pac-patient-info">
+                            <img src="./src/images/people.png" alt="Paciente">
+                            <span>John Doe</span>
+                        </div>
+                    </td>
+                    <td>Dor de cabeça</td>
+                    <td>01-10-2021</td>
+                    <td><span class="pac-status aceito">Aceito</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="pac-patient-info">
+                            <img src="./src/images/people.png" alt="Paciente">
+                            <span>John Doe</span>
+                        </div>
+                    </td>
+                    <td>Infecção Urinária</td>
+                    <td>01-10-2021</td>
+                    <td><span class="pac-status pendente">Pendente</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="pac-patient-info">
+                            <img src="./src/images/people.png" alt="Paciente">
+                            <span>John Doe</span>
+                        </div>
+                    </td>
+                    <td>Ortopedia</td>
+                    <td>01-10-2021</td>
+                    <td><span class="pac-status em-analise">Pendente</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="pac-ver-mais">Ver mais...</a>
+    </div>
+</main>
+
+
+<div class="patient-details-modal" id="patientDetailsModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="patient-profile">
+                <img src="" alt="Patient" class="patient-photo" id="modalPatientPhoto">
+                <div class="patient-basic">
+                    <h2 id="modalPatientName"></h2>
+                    <p id="modalPatientAge"></p>
+                    <p id="modalPatientId"></p>
+                </div>
+            </div>
+            <div class="patient-info-grid">
+                <div class="info-item">
+                    <label>Tipo sanguíneo</label>
+                    <span id="modalBloodGroup"></span>
+                </div>
+                <div class="info-item">
+                    <label>WhatsApp</label>
+                    <span id="modalContact"></span>
+                </div>
+                <div class="info-item">
+                    <label>Altura</label>
+                    <span id="modalHeight"></span>
+                </div>
+                <div class="info-item">
+                    <label>Peso</label>
+                    <span id="modalWeight"></span>
+                </div>
+                <div class="info-item">
+                    <label>Alimentos</label>
+                    <div class="ailments-tags" id="modalAilments"></div>
+                </div>
+                <div class="info-item">
+                    <label>Proxima consulta</label>
+                    <span id="modalLastVisit"></span>
+                </div>
+            </div>
+            <button class="create-consultation-btn">Create Consultation</button>
+        </div>
+    </div>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html> 

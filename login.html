@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Sabará - Cadastro</title>
+    <link rel="stylesheet" href="./css/style-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="alert-container" id="alertContainer">
+        <div class="alert">
+            <i class="fas fa-check-circle"></i>
+            <span></span>
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <img src="./src/images/logo_sabara.png"alt="Logo Sabará" class="logo">
+        </header>
+
+        <main class="main-content">
+            <h1 class="title">Escolha o tipo do cadastro</h1>
+            
+            <div class="options-grid">
+                <div class="option-card">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Paciente</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-user-md"></i>
+                    <span>Médico</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-hospital-user"></i>
+                    <span>Enfermaria</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-tools"></i>
+                    <span>Manutenção</span>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-broom"></i>
+                    <span>Limpeza</span>
+                </div>
+            </div>
+
+            <button class="continue-btn">
+                Continuar
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </main>
+    </div>
+
+    <!-- Overlay do Modal -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Modal Paciente -->
+    <div class="modal" id="modalPaciente">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3><i class="fas fa-user-circle"></i> Área do Paciente</h3>
+            <div class="modal-buttons">
+                <button class="modal-btn login" onclick="redirectTo('login-paciente.html')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Fazer Login
+                </button>
+                <button class="modal-btn cadastro" onclick="redirectTo('cadastro-paciente.html')">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Médico -->
+    <div class="modal" id="modalMedico">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3><i class="fas fa-user-md"></i> Área do Médico</h3>
+            <div class="modal-buttons">
+                <button class="modal-btn login" onclick="redirectTo('login-medico.html')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Fazer Login
+                </button>
+                <button class="modal-btn cadastro" onclick="redirectTo('cadastro-funcionario.html')">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modalEnf">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3><i class="fas fa-user-md"></i> Área do Enfermeiro(a)</h3>
+            <div class="modal-buttons">
+                <button class="modal-btn login" onclick="redirectTo('login-enfermaria.html')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Fazer Login
+                </button>
+                <button class="modal-btn cadastro" onclick="redirectTo('cadastro-funcionario.html')">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modalManutec">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3><i class="fas fa-user-md"></i> Área do Técnico</h3>
+            <div class="modal-buttons">
+                <button class="modal-btn login" onclick="redirectTo('login-manutencao.html')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Fazer Login
+                </button>
+                <button class="modal-btn cadastro" onclick="redirectTo('cadastro-funcionario.html')">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+      <!-- Modal Médico -->
+      <div class="modal" id="modalLimp">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3><i class="fas fa-user-md"></i> Área do Funcionario</h3>
+            <div class="modal-buttons">
+                <button class="modal-btn login" onclick="redirectTo('login-limpeza.html')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Fazer Login
+                </button>
+                <button class="modal-btn cadastro" onclick="redirectTo('cadastro-funcionario.html')">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Funcionário -->
+    <div class="modal" id="modalFuncionario">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3><i class="fas fa-hospital-user"></i> Área do Funcionário</h3>
+            <div class="modal-buttons">
+                <button class="modal-btn login" onclick="redirectTo('login-medico.html')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Fazer Login
+                </button>
+                <button class="modal-btn cadastro" onclick="redirectTo('cadastro-funcionario.html')">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+
+    <script src="js/script-login.js"></script>
+</body>
+</html>

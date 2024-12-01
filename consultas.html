@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portal Paciente - Consultas</title>
+</head>
+<body>    
+    <main class="patient-home">
+        <div class="patient-container">
+            <nav class="menu">
+				<div class="logo_hospital">
+				<img src="./src/images/logo_sabara.png" alt="Logo do Hospital Sabará" class="logo">
+				</div>
+				<div class="nav-section">
+					<a href="./consultas.html" class="nav-item active">
+						<img src="./src/assets/iconConsultas.svg" alt="Dashboard" class="nav-icon">
+						<p>Consultas</p>
+					</a>
+					<a href="./exam_patient.html" class="nav-item">
+						<img src="./src/assets/iconExames.svg" alt="Exames" class="nav-icon">
+						<p>Exames</p>
+					</a>
+				</div>
+				
+				<div class="nav-section">
+					<h4 class="section-title">Conta</h4>
+					<a href="#" class="nav-item">
+						<img src="./src/assets/iconPerfil.svg" alt="Perfil" class="nav-icon">
+						<p>Perfil</p>
+					</a>
+					<a href="./login.html" class="nav-item">
+						<i class="fas fa-sign-out-alt"></i>
+						<span>Sair</span>
+					</a>
+				</div>
+			</nav>
+
+            <section class="main-content">
+                <!-- Header -->
+                <header>
+                    <h1 class="page-title">Consultas</h1>
+                    <div class="header-right">
+                        <div class="notify-wrapper">
+                            <i class="fas fa-bell" id="notifyBell"></i>
+                            <span class="notify-count">3</span>
+                            
+                            <!-- Modal de Notificações -->
+                            <div class="notify-dropdown">
+                                <div class="notify-header">
+                                    <h3>Notificações</h3>
+                                    <span class="notify-mark-read">Marcar todas como lidas</span>
+                                </div>
+                                
+                                <div class="notify-list">
+                                    <div class="notify-item urgent">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-calendar-exclamation"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Consulta Confirmada</span>
+                                                <small>Hoje 11:00</small>
+                                            </div>
+                                            <p>Sua consulta com Dr. Erick foi confirmada</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-file-medical"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Resultado de Exame</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Seus exames já estão disponíveis</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-pills"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Nova Receita</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Uma nova receita foi adicionada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <p class="user-name">Roberto</p>
+                                <p class="user-role">Paciente</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Conteúdo da página -->
+                <div class="appointment-container">
+                    <div class="appointment-form-section">
+                        <h2>Agendar Consulta</h2>
+                        <p class="form-description">Preencha o formulário abaixo para agendar sua consulta</p>
+                        
+                        <form id="appointmentForm" class="appointment-form">
+                            <div class="form-row">
+                                <div class="form-group required">
+                                    <label for="name">Nome completo</label>
+                                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="gender">Gênero</label>
+                                    <select id="gender" name="gender" required>
+                                        <option value="" disabled selected>Selecione seu gênero</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group required">
+                                    <label for="date">Data da consulta</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="time">Horário</label>
+                                    <select id="time" name="time" required>
+                                        <option value="" disabled selected>Selecione o horário</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group required">
+                                    <label for="doctor">Médico</label>
+                                    <select id="doctor" name="doctor" required>
+                                        <option value="" disabled selected>Selecione o médico</option>
+                                        <option value="Dr. Erick">Dr. Erick</option>
+                                        <option value="Dra. Luiza">Dra. Luiza</option>
+                                        <option value="Dr. Davi">Dr. Davi</option>
+                                        <option value="Dr. João">Dr. João</option>
+                                        <option value="Dra. Gabi">Dra. Gabi</option>
+                                    </select>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="department">Departamento</label>
+                                    <select id="department" name="department" required>
+                                        <option value="" disabled selected>Selecione o departamento</option>
+                                        <option value="Cardiologia">Cardiologia</option>
+                                        <option value="Dermatologia">Dermatologia</option>
+                                        <option value="Ortopedia">Ortopedia</option>
+                                        <option value="Pediatria">Pediatria</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="message">Mensagem (opcional)</label>
+                                <textarea id="message" name="message" placeholder="Digite alguma observação se necessário" rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Agendar Consulta</button>
+                        </form>
+                    </div>
+
+                    <div class="scheduled-appointments">
+                        <h3>Consultas Agendadas</h3>
+                        <div id="appointmentsList" class="appointments-list">
+                            <!-- Card de exemplo 1 -->
+                            <div class="appointment-card">
+                                <img src="./src/img/doctor-avatar.png" alt="Dr. Erick" class="doctor-avatar">
+                                <div class="appointment-info">
+                                    <h4>Dr. Erick</h4>
+                                    <p><i class="far fa-calendar-alt"></i> 15/04/2024 - 09:00</p>
+                                    <div class="appointment-tags">
+                                        <span class="tag tag-department">
+                                            <i class="fas fa-hospital-user"></i> Cardiologia
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./js/script-login.js"></script>
+</body>
+</html> 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portal Médico - Exames</title>
+</head>
+<body>    
+    <main class="patient-home">
+        <div class="patient-container">
+            <nav class="menu">
+				<div class="logo_hospital">
+				<img src="./src/images/logo_sabara.png" alt="Logo do Hospital Sabará" class="logo">
+				</div>
+				<div class="nav-section">
+					<a href="home_doctor.html" class="nav-item">
+						<i class="fas fa-home"></i>
+						<span>Home</span>
+					</a>
+					<a href="consultas-medico.html" class="nav-item">
+						<i class="fas fa-calendar-check"></i>
+						<span>Consultas</span>
+					</a>
+					<a href="exam_doctor.html" class="nav-item active">
+						<i class="fas fa-file-medical"></i>
+						<span>Exames</span>
+					</a>
+					<a href="hospitalization_doctor.html" class="nav-item">
+						<i class="fas fa-procedures"></i>
+						<span>Internação</span>
+					</a>
+					<a href="presReceita.html" class="nav-item">
+						<i class="fas fa-prescription"></i>
+						<span>Prescrever</span>
+					</a>
+				</div>
+				
+				<div class="nav-section">
+					<h4 class="section-title">Conta</h4>
+					<a href="#" class="nav-item">
+						<i class="fas fa-user"></i>
+						<span>Perfil</span>
+					</a>
+					<a href="./login.html" class="nav-item">
+						<i class="fas fa-sign-out-alt"></i>
+						<span>Sair</span>
+					</a>
+				</div>
+			</nav>
+
+            <section class="main-content">
+                <header>
+                    <h1 class="page-title">Exames</h1>
+                    <div class="header-right">
+                        <div class="notify-wrapper">
+                            <i class="fas fa-bell" id="notifyBell"></i>
+                            <span class="notify-count">3</span>
+                            
+                            <div class="notify-dropdown">
+                                <div class="notify-header">
+                                    <h3>Notificações</h3>
+                                    <span class="notify-mark-read">Marcar todas como lidas</span>
+                                </div>
+                                
+                                <div class="notify-list">
+                                    <div class="notify-item urgent">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-calendar-exclamation"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Consulta Confirmada</span>
+                                                <small>Hoje 11:00</small>
+                                            </div>
+                                            <p>Sua consulta com Dr. Erick foi confirmada</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-file-medical"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Resultado de Exame</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Seus exames já estão disponíveis</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notify-item">
+                                        <div class="notify-icon">
+                                            <i class="fas fa-pills"></i>
+                                        </div>
+                                        <div class="notify-content">
+                                            <div class="notify-title">
+                                                <span>Nova Receita</span>
+                                                <small>5 dias atrás</small>
+                                            </div>
+                                            <p>Uma nova receita foi adicionada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <p class="user-name">Roberto</p>
+                                <p class="user-role">Paciente</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+<main>
+    
+
+    <div class="exam-alert">
+        <div class="alert-content">
+            <div class="alert-icon">
+                <i class="far fa-calendar"></i>
+            </div>
+            <div class="alert-text">
+                <h3>Lembrete Exame</h3>
+                <p>Nome do Paciente</p>
+            </div>
+        </div>
+        <div class="alert-date">15/12/2024 - 11:00</div>
+    </div>
+
+    <div class="table-data">
+        <div class="order">
+            <div class="head">
+                <h3>Exames</h3>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Doença</th>
+                        <th>Data</th>
+                        <th>Aprovação</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="patient-info">
+                                <p>John Doe</p>
+                            </div>
+                        </td>
+                        <td>Dor de cabeça</td>
+                        <td>01-10-2021</td>
+                        <td><span class="status aceito">Aceito</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn-edit" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="patient-info">
+                                <p>John Doe</p>
+                            </div>
+                        </td>
+                        <td>Infecção Urinária</td>
+                        <td>01-10-2021</td>
+                        <td><span class="status pendente">Pendente</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn-edit" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="patient-info">
+                                <p>John Doe</p>
+                            </div>
+                        </td>
+                        <td>Ortopedia</td>
+                        <td>01-10-2021</td>
+                        <td><span class="status em-analise">Pendente</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn-edit" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html> 
